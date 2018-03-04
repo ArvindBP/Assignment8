@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Movie Cruiser</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body onload="home()">
+    <div id="heading">
+        <p>THE MOVIE DATABASE</p>
+    </div>
+    <div class="container" id="searchbar">
+    </div>
+    <div class="container" id="display">
+    </div>
+    <div id="display1">
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Add a Collection</h4>
+                <p> Enter name of the collection</p>
+                <br>
+                <div class="input-field col s6">
+                    <input id="collec_name" type="text" class="validate">
+                    <label for="collec_name">Name</label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="waves-effect waves-green btn-flat" id="Adding" onclick="addcollec(document.getElementById('collec_name').value)">Add</a>
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+            </div>
+        </div>
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <h4>Delete a Collection</h4>
+                <p> Enter name of the collection you want to delete</p>
+                <br>
+                <div class="input-field col s6">
+                    <input id="collec_del" type="text" class="validate">
+                    <label for="collec_del">Name</label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="waves-effect waves-green btn-flat" onclick="delecollec(document.getElementById('collec_del').value)" id="Deleting">Delete</a>
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+            </div>
+        </div>
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <h4>Edit</h4>
+                <p> Enter name of the collection you want to edit</p>
+                <br>
+                <div class="input-field col s6">
+                    <input id="collec_edit1" type="text" class="validate" placeholder="Old Name">
+                    <input id="collec_edit2" type="text" class="validate" placeholder="New Name">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="waves-effect waves-green btn-flat" onclick="editcollec(document.getElementById('collec_edit1').value,document.getElementById('collec_edit2').value)" id="Deleting">Edit</a>
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+            </div>
+        </div>
+        <div id="modal4" class="modal">
+            <div class="modal-content" id="final">
+                <h4>Which Collection do you want to add this movie to</h4>
+                <p>Here are the List of Existing collections</p>
+                <br>
+                <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Collection List</a>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="dropdowncre">
+        <ul id="dropdown1" class="dropdown-content">
+            
+        </ul>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script>
+    var collection = [];
+    var c ={};
+    var j=0;
+    </script>
+    <script src="home.js"></script>
+    <script src="mycollections.js"></script>
+    <script src="search.js"></script>
+    <script src="display.js"></script>
+    <script src="modal.js"></script>
+    <script src="addcollec.js"></script>
+    <script src="delecollec.js"></script>
+    <script src="editcollec.js"></script>
+    <script src="dispcolleclist.js"></script>
+    <script src="compute.js"></script>
+    <script src="compute1.js"></script>
+    <script src="indicollecview.js"></script>
+    <script src="deletefromcollec.js"></script>
+</body>
+
+</html>
